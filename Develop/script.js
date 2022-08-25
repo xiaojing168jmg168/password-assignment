@@ -1,8 +1,23 @@
 // Assignment code here
 //set user prompt
 function generatePassword(){
-var userInput = window.prompt("How many characters would you like your password to contain?");
+//validate the input
+while(true){
+var userInput = window.prompt("How many characters would you like your password to contain?")
+//user close the prompt
+if(userInput === null){
+return;
+}
 var passwordLength = parseInt(userInput);
+
+if(passwordLength <8 || passwordLength >128){
+window.alert("Invalid password length. Length should be between 8 and 128 characters.")
+}else if(isNaN(passwordLength)){
+window.alert("That's not a number!")
+}else{
+ break;
+}
+}
 
 var hasSymbols = window.confirm("Click 'ok' to confirms including special characters.");
 var hasNumbers = window.confirm("Click 'ok' to confirms including numbers.")
