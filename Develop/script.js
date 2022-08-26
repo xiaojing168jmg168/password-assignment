@@ -38,6 +38,20 @@ for(var i = 0; i<uppercases.length; i++){
 lowercases[i] = uppercases[i].toLowerCase();
 }
 
+//confirm user choices
+var hasSymbols = window.confirm("Click 'ok' to confirms including special characters.");
+var hasNumbers = window.confirm("Click 'ok' to confirms including numbers.")
+var hasLowercase = window.confirm("Click 'ok' to confirms including lowercase characters.")
+var hasUppercase = window.confirm("Click 'ok' to confirms including uppercase characters.")
+
+//add user's choices to availableCharacters
+var availableCharacters = [
+...(hasSymbols ? symbols:[]),
+...(hasNumbers ? numbers:[]),
+...(hasLowercase ? lowercases:[]),
+...(hasUppercase ? uppercases:[])
+];
+
 }
 
 // Get references to the #generate element
