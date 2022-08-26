@@ -51,6 +51,16 @@ var availableCharacters = [
 ...(hasLowercase ? lowercases:[]),
 ...(hasUppercase ? uppercases:[])
 ];
+//find random index to generat password
+var generatedPassword = "";
+
+if(availableCharacters.length === 0) return "";
+
+for(let i = 0; i < passwordLength; i++){
+const randomIndex = Math.floor(Math.random() * availableCharacters.length);
+generatedPassword += availableCharacters[randomIndex];
+}
+return generatedPassword;
 
 }
 
