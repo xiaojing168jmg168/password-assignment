@@ -1,7 +1,21 @@
 // Assignment code here
-//set user prompt
+
 function generatePassword(){
-//validate the input
+//add characters
+var symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ".", "`", "~", "|", "<", ">", "=", "-", "_"];
+var numbers = [1,2,3,4,5,6,7,8,9,0];
+
+var uppercases = (() => {
+  const caps = [...Array(26)].map((val, i) => String.fromCharCode(i + 65));
+  return caps;
+})();
+
+var lowercases = [];
+for(var i = 0; i<uppercases.length; i++){
+lowercases[i] = uppercases[i].toLowerCase();
+}
+
+//set user prompt, validate the input
 while(true){
 var userInput = window.prompt("How many characters would you like your password to contain?")
 //user close the prompt
@@ -17,25 +31,6 @@ window.alert("That's not a number!")
 }else{
  break;
 }
-}
-
-var hasSymbols = window.confirm("Click 'ok' to confirms including special characters.");
-var hasNumbers = window.confirm("Click 'ok' to confirms including numbers.")
-var hasLowercase = window.confirm("Click 'ok' to confirms including lowercase characters.")
-var hasUppercase = window.confirm("Click 'ok' to confirms including uppercase characters.")
-
-//add characters
-var symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "-", ".", "`", "~", "|", "<", ">", "=", "-", "_"];
-var numbers = [1,2,3,4,5,6,7,8,9,0];
-
-var uppercases = (() => {
-  const caps = [...Array(26)].map((val, i) => String.fromCharCode(i + 65));
-  return caps;
-})();
-
-var lowercases = [];
-for(var i = 0; i<uppercases.length; i++){
-lowercases[i] = uppercases[i].toLowerCase();
 }
 
 //confirm user choices
