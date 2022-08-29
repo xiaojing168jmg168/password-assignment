@@ -8,7 +8,7 @@ var numbers = [1,2,3,4,5,6,7,8,9,0];
 var uppercases = (() => {
   const caps = [...Array(26)].map((val, i) => String.fromCharCode(i + 65));
   return caps;
-})();
+})();//from stackOverflow
 
 var lowercases = [];
 for(var i = 0; i<uppercases.length; i++){
@@ -34,12 +34,14 @@ window.alert("That's not a number!")
 }
 
 //confirm user choices
-var hasSymbols = window.confirm("Click 'ok' to confirms including special characters.");
-var hasNumbers = window.confirm("Click 'ok' to confirms including numbers.")
-var hasLowercase = window.confirm("Click 'ok' to confirms including lowercase characters.")
-var hasUppercase = window.confirm("Click 'ok' to confirms including uppercase characters.")
+var hasLowercase = window.confirm("Click OK to confirms including lowercase characters.")
+var hasUppercase = window.confirm("Click OK to confirms including uppercase characters.")
+var hasNumbers = window.confirm("Click OK to confirms including numbers.")
+var hasSymbols = window.confirm("Click OK to confirms including special characters.");
+
 
 //add user's choices to availableCharacters
+//use ternary operator and spread operator
 var availableCharacters = [
 ...(hasSymbols ? symbols:[]),
 ...(hasNumbers ? numbers:[]),
