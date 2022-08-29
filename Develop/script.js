@@ -67,6 +67,7 @@ var generateBtn = document.querySelector("#generate");
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+if(!password) return; //when user cancel prompt, don't show undefined
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 
