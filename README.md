@@ -17,4 +17,4 @@ This application adapts to multiple screen sizes.
 
 web link: https://xiaojing168jmg168.github.io/password-assignment/
 
-![screeshot](images/generator-password.jpg)
+![screeshot](Develop/images/generator-password.jpg)
